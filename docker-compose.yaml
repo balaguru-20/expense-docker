@@ -7,7 +7,7 @@ services:
     image: backend:1.0.0
     networks:
     - expense
-    conatiner_name: backend
+    container_name: backend
     depends_on:
     - mysql
     
@@ -16,7 +16,7 @@ services:
     image: mysql:1.0.0
     networks:
     - expense
-    conatiner_name: mysql
+    container_name: mysql
     volumes:
     - mysql:var/lib/mysql
 
