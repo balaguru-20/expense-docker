@@ -5,6 +5,7 @@ volumes:
 services:
   backend:
     image: backend:1.0.0
+    #backend trying to connect mysql, before it is completely up, so we need to delay few sec
     command: sh -c "sleep 5 && node /opt/backend/index.js"
     networks:
     - expense
